@@ -1,0 +1,2014 @@
+ <!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SilaiKala | Premium Fashion Store</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff8fc;
+    color:#28152f;
+}
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+    background:linear-gradient(90deg,#35104e,#c31970,#7c20a7);
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:white;
+    padding:14px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff3c91,#7620a5);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:30px;
+    box-shadow:0 5px 18px rgba(190,25,112,.3);
+}
+
+.logo-text h1{
+    font-family:Georgia,serif;
+    font-size:28px;
+    color:#35104e;
+}
+
+.logo-text p{
+    color:#c31970;
+    font-size:9px;
+    letter-spacing:1.5px;
+}
+
+/* SEARCH */
+
+.search{
+    flex:1;
+    max-width:450px;
+    display:flex;
+    background:#fff3f8;
+    border:1px solid #f0c5da;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.search input{
+    flex:1;
+    border:0;
+    outline:none;
+    background:transparent;
+    padding:13px 18px;
+}
+
+.search button{
+    border:0;
+    background:#e91e73;
+    color:white;
+    width:55px;
+    font-size:20px;
+}
+
+/* HEADER ACTION */
+
+.actions{
+    display:flex;
+    gap:20px;
+}
+
+.action{
+    text-align:center;
+    font-size:12px;
+    color:#35104e;
+}
+
+.action-icon{
+    display:block;
+    font-size:23px;
+}
+
+/* ================= NAV ================= */
+
+.nav{
+    background:linear-gradient(90deg,#35104e,#74176e,#c31970);
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    padding:13px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav a:hover{
+    color:#ffd1e5;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:600px;
+    background:
+    linear-gradient(90deg,rgba(31,7,46,.8),rgba(0,0,0,.15)),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:70px 8%;
+}
+
+.hero-content{
+    max-width:620px;
+    color:white;
+}
+
+.hero-small{
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-family:Georgia,serif;
+    font-size:65px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero h2 span{
+    color:#ff72b0;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.shop-btn{
+    display:inline-block;
+    background:linear-gradient(90deg,#ff2079,#9b29d5);
+    color:white;
+    padding:17px 40px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.shop-btn:hover{
+    transform:scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    scroll-margin-top:100px;
+}
+
+.section{
+    padding:80px 6%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+    color:#35104e;
+}
+
+.title p{
+    color:#777;
+    margin-top:8px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+}
+
+.category{
+    text-align:center;
+}
+
+.category-img{
+    width:140px;
+    height:140px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    border:5px solid white;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.category-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.category h3{
+    margin-top:12px;
+    font-size:15px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 7px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-7px);
+}
+
+.product-img{
+    height:310px;
+    background:#f6dce8;
+    position:relative;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.tag{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#e91e73;
+    color:white;
+    padding:7px 12px;
+    border-radius:5px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.heart{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:white;
+    font-size:21px;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.stars{
+    color:#ffae00;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#e91e73;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.old-price{
+    color:#999;
+    text-decoration:line-through;
+    font-size:14px;
+    margin-left:6px;
+}
+
+.discount{
+    color:#16833b;
+    background:#e5f8e9;
+    font-size:11px;
+    padding:5px;
+    border-radius:5px;
+}
+
+.product-buttons{
+    display:flex;
+    gap:8px;
+    margin-top:15px;
+}
+
+.details{
+    flex:1;
+    padding:11px 5px;
+    border:1px solid #e91e73;
+    color:#e91e73;
+    text-align:center;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.whatsapp{
+    flex:1;
+    padding:11px 5px;
+    background:#20c967;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* ================= OFFER ================= */
+
+.offer{
+    margin:20px 6%;
+    padding:40px;
+    border-radius:22px;
+    background:linear-gradient(90deg,#ff1977,#9d29d3);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.offer h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+}
+
+.offer p{
+    margin-top:8px;
+}
+
+.offer-code{
+    background:white;
+    color:#8b206e;
+    padding:15px 25px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* ================= BENEFITS ================= */
+
+.benefits{
+    background:white;
+    padding:38px 6%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.benefit{
+    text-align:center;
+    border-right:1px solid #ddd;
+    padding:10px;
+}
+
+.benefit:last-child{
+    border-right:0;
+}
+
+.benefit-icon{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.benefit h3{
+    font-size:16px;
+}
+
+.benefit p{
+    color:#777;
+    font-size:13px;
+    margin-top:5px;
+}
+
+/* ================= FEATURED PRODUCT ================= */
+
+.featured{
+    max-width:1100px;
+    margin:auto;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    box-shadow:0 12px 40px rgba(0,0,0,.12);
+}
+
+.featured-image{
+    background:#f3d9e6;
+    padding:25px;
+}
+
+.featured-image img{
+    width:100%;
+    height:550px;
+    object-fit:contain;
+}
+
+.featured-info{
+    padding:50px;
+}
+
+.label{
+    color:#e91e73;
+    font-weight:bold;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+.featured-info h2{
+    font-family:Georgia,serif;
+    font-size:35px;
+    margin:15px 0;
+}
+
+.description{
+    color:#666;
+    line-height:1.7;
+    margin:20px 0;
+}
+
+.big-price{
+    color:#e91e73;
+    font-size:36px;
+    font-weight:bold;
+}
+
+.size-title{
+    display:block;
+    margin-top:25px;
+    font-weight:bold;
+}
+
+.size{
+    background:white;
+    border:1px solid #ddd;
+    padding:10px 15px;
+    border-radius:7px;
+    margin:10px 5px 20px 0;
+}
+
+.buy{
+    display:block;
+    background:linear-gradient(90deg,#ff2079,#9b29d5);
+    color:white;
+    padding:16px;
+    border-radius:10px;
+    text-align:center;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* ================= CREATOR CLUB ================= */
+
+.creator-club{
+    padding:85px 6%;
+    background:
+    radial-gradient(circle at 20% 20%,#ff4c9b55,transparent 35%),
+    linear-gradient(135deg,#22072f,#7a126d,#d31b72);
+    color:white;
+}
+
+.creator-box{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.7fr;
+    gap:45px;
+    align-items:center;
+}
+
+.creator-card{
+    background:#ffffff15;
+    border:1px solid #ffffff30;
+    padding:45px;
+    border-radius:28px;
+    text-align:center;
+    backdrop-filter:blur(8px);
+}
+
+.creator-icon{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ff4b9b,#7020c7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    box-shadow:0 10px 30px #0005;
+}
+
+.creator-card h3{
+    font-family:Georgia,serif;
+    font-size:28px;
+    margin-top:20px;
+}
+
+.creator-card p{
+    color:#f7dce9;
+    margin-top:10px;
+}
+
+.creator-content .creator-label{
+    color:#ff9ac5;
+    font-weight:bold;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+.creator-content h2{
+    font-family:Georgia,serif;
+    font-size:48px;
+    margin:12px 0 20px;
+}
+
+.creator-content p{
+    color:#f1ddea;
+    line-height:1.8;
+    font-size:17px;
+    max-width:700px;
+}
+
+.creator-steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:30px;
+}
+
+.creator-step{
+    background:#ffffff12;
+    border:1px solid #ffffff20;
+    border-radius:15px;
+    padding:18px;
+}
+
+.creator-step strong{
+    display:block;
+    font-size:25px;
+    margin-bottom:7px;
+}
+
+.creator-step span{
+    font-size:13px;
+    color:#ead8e7;
+}
+
+.instagram-btn{
+    display:inline-block;
+    margin-top:28px;
+    background:white;
+    color:#c31970;
+    padding:16px 30px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.instagram-btn:hover{
+    transform:scale(1.05);
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:linear-gradient(135deg,#fff0f7,#f3e8ff);
+    text-align:center;
+}
+
+.about-content{
+    max-width:820px;
+    margin:auto;
+}
+
+.about h2{
+    font-family:Georgia,serif;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:#666;
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* ================= REVIEWS ================= */
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 6px 22px rgba(0,0,0,.08);
+}
+
+.review p{
+    color:#666;
+    line-height:1.7;
+}
+
+.review h4{
+    margin-top:15px;
+}
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter{
+    background:#ffddea;
+    padding:60px 6%;
+    text-align:center;
+}
+
+.newsletter h2{
+    font-family:Georgia,serif;
+    font-size:34px;
+}
+
+.newsletter p{
+    color:#666;
+    margin:10px;
+}
+
+.email-box{
+    max-width:550px;
+    margin:25px auto 0;
+    display:flex;
+}
+
+.email-box input{
+    flex:1;
+    border:0;
+    outline:0;
+    padding:16px 20px;
+    border-radius:30px 0 0 30px;
+}
+
+.email-box button{
+    border:0;
+    background:#e91e73;
+    color:white;
+    padding:0 25px;
+    border-radius:0 30px 30px 0;
+    font-weight:bold;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#180b21;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+}
+
+.contact p{
+    color:#bbb;
+    margin:12px;
+}
+
+.contact-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#20c967;
+    color:white;
+    padding:15px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0d0710;
+    color:white;
+    padding:60px 6% 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-logo{
+    font-family:Georgia,serif;
+    color:#ff5b9d;
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer a{
+    display:block;
+    color:#aaa;
+    text-decoration:none;
+    margin:10px 0;
+}
+
+footer p{
+    color:#aaa;
+    line-height:1.7;
+}
+
+.copyright{
+    border-top:1px solid #ffffff20;
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#888;
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+
+.float-whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#20c967;
+    color:white;
+    text-decoration:none;
+    padding:14px 20px;
+    border-radius:35px;
+    font-weight:bold;
+    box-shadow:0 7px 25px #0005;
+    z-index:2000;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1000px){
+
+    .categories{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .benefits{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .creator-box{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:700px){
+
+    header{
+        justify-content:center;
+    }
+
+    .search,
+    .actions{
+        display:none;
+    }
+
+    .nav{
+        overflow-x:auto;
+        justify-content:flex-start;
+        gap:25px;
+    }
+
+    .hero{
+        min-height:620px;
+        padding:40px 7%;
+    }
+
+    .hero h2{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .category-img{
+        width:120px;
+        height:120px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .offer{
+        flex-direction:column;
+        text-align:center;
+        margin:15px;
+    }
+
+    .featured{
+        grid-template-columns:1fr;
+    }
+
+    .featured-image img{
+        height:400px;
+    }
+
+    .featured-info{
+        padding:30px;
+    }
+
+    .creator-content h2{
+        font-size:35px;
+    }
+
+    .creator-steps{
+        grid-template-columns:1fr;
+    }
+
+    .creator-card{
+        padding:30px 20px;
+    }
+
+    .reviews{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .email-box{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .email-box input,
+    .email-box button{
+        padding:15px;
+        border-radius:30px;
+    }
+
+    .float-whatsapp{
+        right:12px;
+        bottom:12px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+✨ SILAIKALA — BEAUTIFUL DESIGNS • QUALITY STITCHING • MADE WITH CARE ✨
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+🧵
+</div>
+
+<div class="logo-text">
+
+<h1>SilaiKala</h1>
+
+<p>DESIGNS THAT FEEL SPECIAL</p>
+
+</div>
+
+</div>
+
+
+<div class="search">
+
+<input
+type="text"
+placeholder="Search products..."
+>
+
+<button>
+⌕
+</button>
+
+</div>
+
+
+<div class="actions">
+
+<div class="action">
+
+<span class="action-icon">
+♡
+</span>
+
+Wishlist
+
+</div>
+
+<div class="action">
+
+<span class="action-icon">
+🛒
+</span>
+
+Cart
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a href="#home">Home</a>
+
+<a href="#categories">Categories</a>
+
+<a href="#products">Products</a>
+
+<a href="#offers">Offers</a>
+
+<a href="#creator">Creator Club</a>
+
+<a href="#about">About</a>
+
+<a href="#reviews">Reviews</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="hero-small">
+✨ NEW COLLECTION
+</div>
+
+<h2>
+Premium <span>Fashion</span><br>
+Made With Love ❤️
+</h2>
+
+<p>
+Beautiful designs, quality stitching
+aur carefully selected products.
+</p>
+
+<a href="#products" class="shop-btn">
+🛍️ SHOP NOW →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="section" id="categories">
+
+<div class="title">
+
+<h2>💗 Shop By Category</h2>
+
+<p>Find your favourite collection</p>
+
+</div>
+
+
+<div class="categories">
+
+
+<div class="category">
+
+<div class="category-img">
+<img src="product.jpg">
+</div>
+
+<h3>New Arrivals</h3>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-img">
+<img src="product.jpg">
+</div>
+
+<h3>Premium</h3>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-img">
+<img src="product.jpg">
+</div>
+
+<h3>Trending</h3>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-img">
+<img src="product.jpg">
+</div>
+
+<h3>Special</h3>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-img">
+<img src="product.jpg">
+</div>
+
+<h3>Collection</h3>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-img">
+<img src="product.jpg">
+</div>
+
+<h3>Offers</h3>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+
+<div class="title">
+
+<h2>✨ Latest Products</h2>
+
+<p>Discover our beautiful collection</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product">
+
+<div class="product-img">
+
+<span class="tag">
+BEST SELLER
+</span>
+
+<button class="heart">
+♡
+</button>
+
+<img src="product.jpg">
+
+</div>
+
+<div class="product-info">
+
+<h3>
+Pink Satin Floral Design
+</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<div class="price">
+
+₹699
+
+<span class="old-price">
+₹999
+</span>
+
+<span class="discount">
+30% OFF
+</span>
+
+</div>
+
+<div class="product-buttons">
+
+<a href="#featured" class="details">
+View Details
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product">
+
+<div class="product-img">
+
+<span class="tag">
+NEW
+</span>
+
+<button class="heart">
+♡
+</button>
+
+<img src="product.jpg">
+
+</div>
+
+<div class="product-info">
+
+<h3>
+Premium Stitching Design
+</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<div class="price">
+
+₹799
+
+<span class="old-price">
+₹1099
+</span>
+
+<span class="discount">
+27% OFF
+</span>
+
+</div>
+
+<div class="product-buttons">
+
+<a href="#featured" class="details">
+View Details
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product">
+
+<div class="product-img">
+
+<span class="tag">
+TRENDING
+</span>
+
+<button class="heart">
+♡
+</button>
+
+<img src="product.jpg">
+
+</div>
+
+<div class="product-info">
+
+<h3>
+Elegant Fashion Design
+</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<div class="price">
+
+₹899
+
+<span class="old-price">
+₹1199
+</span>
+
+<span class="discount">
+25% OFF
+</span>
+
+</div>
+
+<div class="product-buttons">
+
+<a href="#featured" class="details">
+View Details
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product">
+
+<div class="product-img">
+
+<span class="tag">
+HOT
+</span>
+
+<button class="heart">
+♡
+</button>
+
+<img src="product.jpg">
+
+</div>
+
+<div class="product-info">
+
+<h3>
+Beautiful Embroidery
+</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<div class="price">
+
+₹999
+
+<span class="old-price">
+₹1299
+</span>
+
+<span class="discount">
+23% OFF
+</span>
+
+</div>
+
+<div class="product-buttons">
+
+<a href="#featured" class="details">
+View Details
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OFFER -->
+
+<section class="offer" id="offers">
+
+<div>
+
+<h2>
+🔥 Special Offer
+</h2>
+
+<p>
+Selected collection par special prices available hain.
+</p>
+
+</div>
+
+<div class="offer-code">
+SILAI30
+</div>
+
+<a href="#products" class="shop-btn">
+SHOP NOW
+</a>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<div class="benefits">
+
+<div class="benefit">
+
+<div class="benefit-icon">
+🚚
+</div>
+
+<h3>
+Easy Delivery
+</h3>
+
+<p>
+Selected orders
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+✨
+</div>
+
+<h3>
+Premium Quality
+</h3>
+
+<p>
+Carefully prepared
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+🔒
+</div>
+
+<h3>
+Safe Ordering
+</h3>
+
+<p>
+Simple order process
+</p>
+
+</div>
+
+
+<div class="benefit">
+
+<div class="benefit-icon">
+💬
+</div>
+
+<h3>
+WhatsApp Support
+</h3>
+
+<p>
+Easy communication
+</p>
+
+</div>
+
+</div>
+
+
+<!-- FEATURED PRODUCT -->
+
+<section class="section" id="featured">
+
+<div class="title">
+
+<h2>
+🌸 Featured Product
+</h2>
+
+<p>
+Our special collection
+</p>
+
+</div>
+
+
+<div class="featured">
+
+
+<div class="featured-image">
+
+<img src="product.jpg">
+
+</div>
+
+
+<div class="featured-info">
+
+<div class="label">
+BEST SELLER
+</div>
+
+<h2>
+Pink Satin Floral Embroidered Design
+</h2>
+
+<div class="stars">
+★★★★★
+</div>
+
+<p class="description">
+
+Beautiful stitched fashion product with
+elegant embroidery and premium finishing.
+Order karne se pehle size aur product details
+confirm karein.
+
+</p>
+
+<div class="big-price">
+₹699
+</div>
+
+<span class="size-title">
+Select Size
+</span>
+
+<button class="size">
+S
+</button>
+
+<button class="size">
+M
+</button>
+
+<button class="size">
+L
+</button>
+
+<button class="size">
+XL
+</button>
+
+
+<a
+href="https://wa.me/91XXXXXXXXXX"
+class="buy"
+>
+
+🛒 ORDER ON WHATSAPP
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CREATOR CLUB -->
+
+<section class="creator-club" id="creator">
+
+<div class="creator-box">
+
+
+<div class="creator-card">
+
+<div class="creator-icon">
+📸
+</div>
+
+<h3>
+SilaiKala
+</h3>
+
+<p>
+Creator Club
+</p>
+
+<p>
+Follow us on Instagram ❤️
+</p>
+
+<a
+href="https://instagram.com/YOUR_INSTAGRAM_ID"
+target="_blank"
+class="instagram-btn"
+>
+
+📸 FOLLOW ON INSTAGRAM
+
+</a>
+
+</div>
+
+
+<div class="creator-content">
+
+<div class="creator-label">
+✨ SILAIKALA CREATOR CLUB
+</div>
+
+<h2>
+Watch. Like. Comment. Shop. ❤️
+</h2>
+
+<p>
+
+Hamare Instagram par naye products ke
+videos dekhein. Agar aapko koi product
+pasand aaye, video ke comment mein
+<b>LINK</b> likhein.
+
+</p>
+
+<p style="margin-top:12px;">
+
+🔗 Product ka link Instagram DM ke
+through bheja ja sakta hai.
+
+</p>
+
+
+<div class="creator-steps">
+
+
+<div class="creator-step">
+
+<strong>
+01
+</strong>
+
+<span>
+Instagram par product video dekhein
+</span>
+
+</div>
+
+
+<div class="creator-step">
+
+<strong>
+02
+</strong>
+
+<span>
+Comment mein LINK likhein
+</span>
+
+</div>
+
+
+<div class="creator-step">
+
+<strong>
+03
+</strong>
+
+<span>
+Product link se shopping karein
+</span>
+
+</div>
+
+</div>
+
+
+<a
+href="https://instagram.com/YOUR_INSTAGRAM_ID"
+target="_blank"
+class="instagram-btn"
+>
+
+📸 VISIT OUR INSTAGRAM
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+
+<div class="about-content">
+
+<h2>
+🧵 About SilaiKala
+</h2>
+
+<p>
+
+SilaiKala ek fashion aur stitching store hai.
+Hum beautiful designs, quality stitching aur
+achhe customer experience par focus karte hain.
+Hamari koshish hai ki customers ko stylish
+aur quality products aasani se mil sakein.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="section" id="reviews">
+
+<div class="title">
+
+<h2>
+⭐ Customer Reviews
+</h2>
+
+<p>
+Customers ka experience
+</p>
+
+</div>
+
+
+<div class="reviews">
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Design bahut beautiful hai aur
+quality achhi lagi.”
+</p>
+
+<h4>
+— Customer
+</h4>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Ordering process simple tha.
+Product bhi achha laga.”
+</p>
+
+<h4>
+— Customer
+</h4>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Beautiful collection.
+Dobara shopping karna pasand karungi.”
+</p>
+
+<h4>
+— Customer
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<h2>
+💌 Stay Updated
+</h2>
+
+<p>
+New products aur offers ki information paayein.
+</p>
+
+<div class="email-box">
+
+<input
+type="email"
+placeholder="Enter your email"
+>
+
+<button>
+Subscribe
+</button>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+<h2>
+📞 Contact SilaiKala
+</h2>
+
+<p>
+Order ya product information ke liye WhatsApp karein.
+</p>
+
+<p>
+📍 India
+</p>
+
+<a
+href="https://wa.me/91XXXXXXXXXX"
+class="contact-btn"
+>
+
+💬 WhatsApp Us
+
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="footer-logo">
+SilaiKala
+</div>
+
+<p>
+Designs That Feel Special ❤️
+</p>
+
+<p>
+Beautiful designs • Quality stitching
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<a href="#home">
+Home
+</a>
+
+<a href="#products">
+Products
+</a>
+
+<a href="#offers">
+Offers
+</a>
+
+<a href="#creator">
+Creator Club
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+Customer Care
+</h3>
+
+<a href="#">
+Order Information
+</a>
+
+<a href="#">
+Return Policy
+</a>
+
+<a href="#">
+Size Guide
+</a>
+
+<a href="#">
+FAQ
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+💬 WhatsApp Support
+</p>
+
+<p>
+📍 India
+</p>
+
+<p>
+🕐 Mon - Sat
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 SilaiKala — All Rights Reserved ❤️
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+href="https://wa.me/918368765274"
+class="float-whatsapp"
+>
+
+💬 WhatsApp
+
+</a>
+
+
+</body>
+</html>
